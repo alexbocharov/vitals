@@ -1,0 +1,11 @@
+@FoodTypeApi_HostAddress = http://localhost:5039
+
+GET {{FoodTypeApi_HostAddress}}/health
+Accept: : application/json
+
+###
+
+GET {{FoodTypeApi_HostAddress}}/liveness
+Accept: : application/json
+
+###
