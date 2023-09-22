@@ -5,5 +5,5 @@ namespace Vitals.FoodType.API;
 
 public interface IFoodTypeService
 {
-    ValueTask<IEnumerable<FoodTypeItem>> GetFoodTypesAsync(int providerId, string username, string password, CancellationToken cancellationToken = default);
+    ValueTask<ICollection<FoodTypeItem>> GetFoodTypesAsync(int providerId, string username, string password, CancellationToken cancellationToken = default);
 }

@@ -3,8 +3,7 @@
 
 namespace Vitals.FoodType.API;
 
-public class VirtualSchollSettings
+public sealed class FoodTYpeSettings
 {
-    public const string SectionName = "VirtualSchool";
-    public string Url { get; init; } = default!;
+    public required string FoodProviderBaseUrl { get; init; }
 }

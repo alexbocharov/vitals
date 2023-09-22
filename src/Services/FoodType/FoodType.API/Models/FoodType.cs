@@ -15,7 +15,7 @@ public class FoodType
     public bool Processed { get; init; }
 
     [JsonPropertyName("createdAt")]
-    public DateTimeOffset CreatedAt { get; init; }
+    public DateTimeOffset CreatedAt { get; private set; }
 
     [JsonPropertyName("foodTypes")]
     public ICollection<FoodTypeItem> FoodTypes { get; init; } = new List<FoodTypeItem>();
@@ -23,6 +23,7 @@ public class FoodType
     public FoodType()
     {
         Id = Guid.NewGuid().ToString();
+        CreatedAt = DateTimeOffset.UtcNow;
     }
 }
 
